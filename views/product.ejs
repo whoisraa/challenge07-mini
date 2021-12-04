@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head') %>
+  <title>miniChallenge - Chapter 7</title>
+</head>
+
+<body>
+  <%- include('partials/navbar') %>
+  <div class="container">
+    <div class="row">
+      <% productList.forEach((products) => { %>
+      <div class="card m-3" style="width: 18rem;">
+        <img
+          src="https://media.giphy.com/media/piYoJnSM5CLO8/giphy.gif"
+          class="card-img-top bg-dark" alt="Image Product">
+        <div class="card-body">
+          <h5 class="card-title"><%= products.title %></h5>
+          <p class="card-text"><%= products.description %></p>
+          <a href="#" class="btn btn-warning">Details</a>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+  <%- include('partials/script') %>
+</body>
+
+</html>
